@@ -1,0 +1,82 @@
+@use "./styles/variables" as *;
+
+:root {
+    --bg: #{$light-bg};
+    --surface: #{$light-surface};
+    --surface-hover: #{$light-surface-hover};
+
+    --text: #{$light-text};
+    --text-muted: #{$light-text-muted};
+
+    --border: #{$light-border};
+
+    --accent: #{$accent};
+    --accent-hover: #{$accent-hover};
+
+    --success: #{$success};
+    --error: #{$error};
+
+    --radius-sm: #{$radius-sm};
+    --radius-md: #{$radius-md};
+    --radius-lg: #{$radius-lg};
+}
+
+[data-theme="dark"] {
+    --bg: #{$dark-bg};
+    --surface: #{$dark-surface};
+    --surface-hover: #{$dark-surface-hover};
+
+    --text: #{$dark-text};
+    --text-muted: #{$dark-text-muted};
+
+    --border: #{$dark-border};
+
+    --accent: #6d8cff;
+    --accent-hover: #829dff;
+
+    --success: #4fbd88;
+    --error: #ef6666;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
